@@ -268,10 +268,11 @@ void acceptPayment(double totalDue, vector <MenuItem> &m, int count){
     }
   }
 
+  
   ofstream myfile;
   myfile.open("C:\\report.html", std::ios::app);
   myfile << "<!DOCTYPE html><html><head></head><body>"; //starting html
-
+  myfile << fixed << setprecision(2) << endl;
   
 
 
@@ -292,11 +293,7 @@ void acceptPayment(double totalDue, vector <MenuItem> &m, int count){
 
     if(payment == "CC" || payment == "cc"){
       cout << "Payment Method: CC" << endl;
-      cout << "Total: " << totalDue << endl;
-      
-      
-      
-
+      cout << "Total: " << totalDue << endl << endl << endl;
  
       myfile << "Payment Method: CC" << endl;
       myfile << "Total: " << totalDue << endl;
@@ -306,7 +303,7 @@ void acceptPayment(double totalDue, vector <MenuItem> &m, int count){
       cout << "Payment Method: Cash" << endl;
         cout << "Total Due: " << totalDue << endl;
         cout << "Money Provided: " << money << endl;
-        cout << "Change: " << money-totalDue << endl << endl;
+        cout << "Change: " << money-totalDue << endl << endl << endl << endl;
 
         myfile << "Payment Method: Cash" << endl;
         myfile << "Total Due: " << totalDue << endl;
@@ -355,7 +352,7 @@ int main()
 
   }while(nextGuest);
 
-  cout << "We are rich, we made $" << dayTotal << "- Time to go home" << endl;
+  cout << "We are rich, we made $" << dayTotal << " - Time to go home" << endl;
 
 
   
