@@ -9,6 +9,11 @@
 using namespace std; 
 #include "Input_Validation_Extended.h"
 
+//04/01/2021
+//Dr. McMillan - Tccd
+//Menu Tutorial - ordering and outputting classes
+//class practice
+
 
 
 class MenuItem
